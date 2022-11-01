@@ -1,0 +1,52 @@
+
+
+.tag {
+    display: inline-block;
+}
+
+.form-group.row label{
+    padding-top: 5px;
+}
+
+.pull-right{
+    text-align: right;
+    float: right;
+}
+
+.dataTables_filter{
+    clear: both;
+    padding-top: 10px;
+}
+
+.fa-file-excel-o:before {
+    content: "\f1c3";
+}
+
+.fa-file-pdf-o:before{
+    content: "\f1c1";
+}
+.fa-refresh:before{
+    content: "\f021";
+}
+
+ul.dt-button-collection li{
+    padding: 5px 10px;
+}
+.main-sidebar .sidebar-brand a {
+    text-transform: unset !important;
+    letter-spacing: 1px !important;
+    font-weight: 700;
+    margin-left: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+.small-sidebar-text{
+    margin-left: 0px !important;
+}
+.main-sidebar .sidebar-menu li a span {
+    line-height: 1.2 !important;
+}
+.rounded{
+    border-radius: 100% !important;
+}

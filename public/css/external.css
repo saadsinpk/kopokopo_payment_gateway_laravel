@@ -1,0 +1,119 @@
+body{
+    background-color: #f5f5f5;
+
+}
+.navbar{
+    background-color: unset !important;
+}
+.newOrderContainer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px #888888;
+    margin-top: 20px;
+}
+
+#app{
+    background-position: top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+    min-height: 500px;
+}
+.headerText{
+    color: #4A8FFC;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.stepper .line {
+    width: 2px;
+    background-color: lightgrey !important;
+}
+.stepper .lead {
+    font-size: 1.1rem;
+}
+
+.simple-footer{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #666666;
+}
+
+.onlyMobile{
+    display: none;
+}
+
+.orderingTypes{
+    white-space: nowrap;
+    overflow-x: scroll;
+    list-style: none;
+    padding:0px !important;
+    margin:0px !important;
+    background-color: #F5F5F5;border-radius: 10px
+}
+
+.orderingTypes li img{
+    width: auto;
+    height: 25px;
+}
+
+.orderingTypes li{
+    display: inline-block;
+    clear: unset;
+    padding-top: 10px;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    border-right: 1px solid rgba(74, 143, 252,0.25);
+    text-align: center !important;
+    min-width:130px;
+}
+
+.orderingTypes li:first-child{
+    padding-left: 0px !important;
+}
+.orderingTypes li:last-child{
+    border-right: 0px !important;
+}
+.orderingTypes li h4{
+    font-size: 0.95rem;
+}
+
+.subheader{
+    color: #222222;
+}
+
+.what-we-can-do-today{
+    color: #4A8FFC;
+    padding-top: 25px
+}
+
+.green-text{
+    color: #00a65a;
+}
+
+
+@media (max-width: 768px) {
+    .onlyMobile{
+        display: block !important;
+    }
+    #app{
+        background-image: unset;
+        background-position: bottom; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: contain; /* Resize the background image to cover the entire container */
+        background-width: 100%;
+    }
+
+    .headerText{
+        text-shadow: #CCC 1px 0 10px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+}

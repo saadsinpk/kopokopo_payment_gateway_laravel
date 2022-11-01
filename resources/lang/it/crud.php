@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => 'Opzionale',
+  'add' => 'Aggiungere',
+  'new' => 'Nuovo',
+  'add_new' => 'Creare',
+  'cancel' => 'Annulla',
+  'save' => 'Salva',
+  'edit' => 'Modificare',
+  'detail' => 'Dettaglio',
+  'details' => 'Particolari',
+  'delete' => 'Elimina',
+  'clean' => 'Pulire',
+  'back' => 'Di ritorno',
+  'action' => '#',
+  'id' => 'id',
+  'created_at' => 'creato a',
+  'updated_at' => 'Aggiornato a',
+  'deleted_at' => 'cancellato a',
+  'are_you_sure' => 'Sei sicuro?',
+];

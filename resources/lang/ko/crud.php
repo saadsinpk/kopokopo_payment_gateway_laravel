@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => '선택 과목',
+  'add' => '추가하려면',
+  'new' => '새로운',
+  'add_new' => '만들다',
+  'cancel' => '취소',
+  'save' => '구하다',
+  'edit' => '편집하다',
+  'detail' => '세부 사항',
+  'details' => '세부',
+  'delete' => '삭제',
+  'clean' => '깨끗한',
+  'back' => '뒤',
+  'action' => '#',
+  'id' => 'ID',
+  'created_at' => '만든 시간',
+  'updated_at' => '업데이트 날짜',
+  'deleted_at' => '삭제 시간',
+  'are_you_sure' => '확실합니까?',
+];

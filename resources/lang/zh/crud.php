@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => '可选的',
+  'add' => '添加',
+  'new' => '新的',
+  'add_new' => '创造',
+  'cancel' => '取消',
+  'save' => '节省',
+  'edit' => '编辑',
+  'detail' => '细节',
+  'details' => '细节',
+  'delete' => '删除',
+  'clean' => '干净的',
+  'back' => '后退',
+  'action' => '#',
+  'id' => 'ID',
+  'created_at' => '创建于',
+  'updated_at' => '更新于',
+  'deleted_at' => '删除于',
+  'are_you_sure' => '你确定吗？',
+];

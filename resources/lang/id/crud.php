@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => 'Opsional',
+  'add' => 'Menambahkan',
+  'new' => 'Baru',
+  'add_new' => 'Membuat',
+  'cancel' => 'Membatalkan',
+  'save' => 'Menyimpan',
+  'edit' => 'Sunting',
+  'detail' => 'Detail',
+  'details' => 'rincian',
+  'delete' => 'Menghapus',
+  'clean' => 'Membersihkan',
+  'back' => 'Kembali',
+  'action' => '#',
+  'id' => 'Indo',
+  'created_at' => 'Dibuat di',
+  'updated_at' => 'Diperbarui Pada',
+  'deleted_at' => 'Dihapus At',
+  'are_you_sure' => 'Apa kamu yakin?',
+];

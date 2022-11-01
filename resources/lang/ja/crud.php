@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => 'オプション',
+  'add' => 'たす',
+  'new' => '新しい',
+  'add_new' => '作成',
+  'cancel' => 'キャンセル',
+  'save' => '保存',
+  'edit' => '編集',
+  'detail' => '詳細',
+  'details' => '詳細',
+  'delete' => '消去',
+  'clean' => '掃除',
+  'back' => '戻る',
+  'action' => '#',
+  'id' => 'ID',
+  'created_at' => '作成日',
+  'updated_at' => '更新日時',
+  'deleted_at' => 'で削除',
+  'are_you_sure' => '本気ですか？',
+];

@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => 'Optioneel',
+  'add' => 'Toevoegen',
+  'new' => 'Nieuw',
+  'add_new' => 'Creëren',
+  'cancel' => 'Annuleren',
+  'save' => 'Opslaan',
+  'edit' => 'Bewerk',
+  'detail' => 'Detail',
+  'details' => 'Details',
+  'delete' => 'Verwijderen',
+  'clean' => 'Schoon',
+  'back' => 'Rug',
+  'action' => '#',
+  'id' => 'ID kaart',
+  'created_at' => 'Gemaakt bij',
+  'updated_at' => 'Bijgewerkt op',
+  'deleted_at' => 'Verwijderd bij',
+  'are_you_sure' => 'Weet je het zeker?',
+];

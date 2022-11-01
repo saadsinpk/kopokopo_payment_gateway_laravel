@@ -1,0 +1,23 @@
+{
+  "sEmptyTable": "テーブルにデータがありません",
+  "sInfo": "_TOTAL_ 個のエントリのうち _START_ から _END_ 個を表示しています",
+  "sInfoEmpty": "0 エントリ中 0 から 0 を表示",
+  "sInfoFiltered": "(合計 _MAX_ 件のエントリからフィルタリング)",
+  "sInfoPostFix": "",
+  "sInfoThousands": "、",
+  "sLengthMenu": "_MENU_ エントリを表示",
+  "sLoadingRecords": "読み込んでいます...",
+  "sProcessing": "処理...",
+  "sSearch": "探す：",
+  "sZeroRecords": "該当する記録は見つかりません",
+  "oPaginate": {
+    "sFirst": "初め",
+    "sLast": "最後",
+    "sNext": "次",
+    "sPrevious": "前"
+  },
+  "oAria": {
+    "sSortAscending": ": 有効にして、列の昇順で並べ替えます",
+    "sSortDescending": ": 列を降順でソートするためにアクティブにします"
+  }
+}

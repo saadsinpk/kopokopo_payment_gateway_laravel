@@ -1,0 +1,24 @@
+
+.pricing_section .card{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.25)!important;
+}
+
+.pricing_section ul li{
+    font-size: 18px;
+    padding: 5px 0px;
+    border-bottom: 1px #cccccc solid;
+}
+.pricing_section ul li i{
+    font-size: 18px;
+}
+.pricing_section ul li:last-child{
+    border-bottom: 0px;
+}
+
+.checkGreen{
+    color: #00a65a;
+}
+.checkRed{
+    color: #cc1b1b;
+}
+

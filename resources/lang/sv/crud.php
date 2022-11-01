@@ -1,0 +1,21 @@
+<?php 
+return [
+  'optional' => 'Frivillig',
+  'add' => 'Tillägga',
+  'new' => 'Ny',
+  'add_new' => 'Skapa',
+  'cancel' => 'Avbryt',
+  'save' => 'Spara',
+  'edit' => 'Redigera',
+  'detail' => 'Detalj',
+  'details' => 'Detaljer',
+  'delete' => 'Radera',
+  'clean' => 'Rena',
+  'back' => 'Tillbaka',
+  'action' => '#',
+  'id' => 'id',
+  'created_at' => 'Skapad vid',
+  'updated_at' => 'Uppdaterad kl',
+  'deleted_at' => 'Raderad kl',
+  'are_you_sure' => 'Är du säker?',
+];

@@ -1,0 +1,23 @@
+{
+  "sEmptyTable": "টেবিলে কোন তথ্য উপলব্ধ নেই",
+  "sInfo": "_TOTAL_ এন্ট্রির মধ্যে _START_ থেকে _END_ পর্যন্ত দেখানো হচ্ছে",
+  "sInfoEmpty": "0 এন্ট্রির মধ্যে 0 থেকে 0 দেখানো হচ্ছে",
+  "sInfoFiltered": "(মোট _MAX_ এন্ট্রি থেকে ফিল্টার করা হয়েছে)",
+  "sInfoPostFix": "",
+  "sInfoThousands": ",",
+  "sLengthMenu": "_MENU_ এন্ট্রি দেখান",
+  "sLoadingRecords": "লোড হচ্ছে...",
+  "sProcessing": "প্রক্রিয়া করা হচ্ছে...",
+  "sSearch": "অনুসন্ধান:",
+  "sZeroRecords": "কোনো মিলে যাওয়া রেকর্ড পাওয়া যায়নি",
+  "oPaginate": {
+    "sFirst": "প্রথম",
+    "sLast": "শেষ",
+    "sNext": "পরবর্তী",
+    "sPrevious": "আগে"
+  },
+  "oAria": {
+    "sSortAscending": ": কলাম আরোহী সাজাতে সক্রিয় করুন",
+    "sSortDescending": ": কলাম সাজানোর জন্য সক্রিয় করুন"
+  }
+}
