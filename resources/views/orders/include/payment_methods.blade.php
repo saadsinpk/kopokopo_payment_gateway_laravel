@@ -59,4 +59,14 @@
             </div>
         </div>
     @endif
+    @if(setting('enable_kopokopo'))
+        <div class="col-md-3 pb-2">
+            <div class="card m-0 text-center selectedPaymentMethod p-2" data-type="online" data-id="kopokopo" style="cursor:pointer;height: 120px!important;">
+                <center>
+                    <img src="{{asset('img/kopo.jpg')}}" title="{{__('Pay with KopoKopo')}}" style="height: 50px;"><br>
+                    <h6 style="font-size: 0.9em;padding-top: 20px;">{{__('KopoKopo')}}</h6>
+                </center>
+            </div>
+        </div>
+    @endif
 </div>

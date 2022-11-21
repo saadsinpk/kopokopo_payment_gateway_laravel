@@ -26,7 +26,6 @@ Route::any('webhook/paypal', 'WebhookAPIController@paypalWebhook');
 Route::any('webhook/mercadopago', 'WebhookAPIController@mercadoPagoWebhook');
 Route::any('webhook/flutterwave', 'WebhookAPIController@flutterwaveWebhook');
 Route::any('webhook/razorpay', 'WebhookAPIController@razorpayWebhook');
-Route::any('webhook/kopokopo', 'WebhookAPIController@kopoKopoWebhook');
 
 
 Route::get('settings', [SettingsAPIController::class, 'settings']);

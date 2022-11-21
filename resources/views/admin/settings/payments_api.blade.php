@@ -282,8 +282,8 @@
 
                                 <hr>
                                 <h5 class="col-12 pb-4"><i class="mr-4 fas fa-handshake"></i> {!! __('Kopo Kopo') !!}</h5>
-
-                                <!-- 'Boolean enable_razorpay Field' -->
+                                
+                                <!-- 'Boolean enable_kopokopo Field' -->
                                 <div class="form-group row">
                                     {!! Form::label('enable_kopokopo', __('Enable kopokopo'),['class' => 'col-2 control-label text-right']) !!}
                                     <div class="checkbox icheck">
@@ -294,19 +294,30 @@
                                         </label>
                                     </div>
                                 </div>
-                                <!-- razorpay_key Field -->
+                                <!-- 'Boolean Sendbox_kopokopo Field' -->
                                 <div class="form-group row">
-                                    {!! Form::label('kopokopo_key', __('kopokopo Client Id'), ['class' => 'col-4 control-label text-right']) !!}
+                                    {!! Form::label('sendbox_kopokopo', __('SendBox kopokopo'),['class' => 'col-2 control-label text-right']) !!}
+                                    <div class="checkbox icheck">
+                                        <label class="w-100 ml-2 form-check-inline">
+                                            {!! Form::hidden('sendbox_kopokopo', 0) !!}
+                                            {!! Form::checkbox('sendbox_kopokopo', 1, setting('sendbox_kopokopo', false)) !!}
+                                            <span class="ml-2">{!! trans('Check to SendBox KopoKopo') !!}</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- kopokopo_key Field -->
+                                <div class="form-group row">
+                                    {!! Form::label('kopokopo_client_id', __('kopokopo Client Id'), ['class' => 'col-4 control-label text-right']) !!}
                                     <div class="col-8">
                                         @if(env('APP_DEMO', false))
                                             <input type="text" class="form-control" value="{{__('Hidden in demo version')}}" disabled="disabled">
                                         @else
-                                            {!! Form::text('kopokopo_key', setting('kopokopo_key'),  ['class' => 'form-control','placeholder'=>  __('Input your KopoKopo Client Id')]) !!}
+                                            {!! Form::text('kopokopo_client_id', setting('kopokopo_client_id'),  ['class' => 'form-control','placeholder'=>  __('Input your KopoKopo Client Id')]) !!}
                                         @endif
                                     </div>
                                 </div>
 
-                                <!-- razorpay_secret Field -->
+                                <!-- kopokopo_secret Field -->
                                 <div class="form-group row">
                                     {!! Form::label('kopokopo_secret', trans('kopokopo Secret'), ['class' => 'col-4 control-label text-right']) !!}
                                     <div class="col-8">
@@ -317,7 +328,44 @@
                                         @endif
                                     </div>
                                 </div>
-                                <!-- razorpay_secret Field -->
+
+                                <!-- kopokopo_Key Field -->
+                                <div class="form-group row">
+                                    {!! Form::label('kopokopo_key', trans('kopokopo Key'), ['class' => 'col-4 control-label text-right']) !!}
+                                    <div class="col-8">
+                                        @if(env('APP_DEMO', false))
+                                            <input type="text" class="form-control" value="{{__('Hidden in demo version')}}" disabled="disabled">
+                                        @else
+                                            {!! Form::text('kopokopo_key', setting('kopokopo_key'),  ['class' => 'form-control','placeholder'=>  __('Input your KopoKopo API Key')]) !!}
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <!-- kopokopo_till_number Field -->
+                                <div class="form-group row">
+                                    {!! Form::label('kopokopo_till_number', trans('kopokopo tillNumber'), ['class' => 'col-4 control-label text-right']) !!}
+                                    <div class="col-8">
+                                        @if(env('APP_DEMO', false))
+                                            <input type="text" class="form-control" value="{{__('Hidden in demo version')}}" disabled="disabled">
+                                        @else
+                                            {!! Form::text('kopokopo_till_number', setting('kopokopo_till_number'),  ['class' => 'form-control','placeholder'=>  __('Input your KopoKopo tillNumber')]) !!}
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <!-- kopokopo_callbackurl Field -->
+                                <div class="form-group row">
+                                    {!! Form::label('kopokopo_callbackurl', trans('kopokopo CallBackUrl'), ['class' => 'col-4 control-label text-right']) !!}
+                                    <div class="col-8">
+                                        @if(env('APP_DEMO', false))
+                                            <input type="text" class="form-control" value="{{__('Hidden in demo version')}}" disabled="disabled">
+                                        @else
+                                            {!! Form::text('kopokopo_callbackurl', setting('kopokopo_callbackurl'),  ['class' => 'form-control','placeholder'=>  __('Input your KopoKopo CallBackUrl')]) !!}
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <!-- kopokopo_Webhook Field -->
                                 <div class="form-group row">
                                     {!! Form::label('kopokopo_webhook_url', trans('kopokopo WebHook URL'), ['class' => 'col-4 control-label text-right']) !!}
                                     <div class="col-8">
@@ -331,6 +379,7 @@
 
                                     </div>
                                 </div>
+
 
 
                                 <div class="form-group text-center pt-4">
