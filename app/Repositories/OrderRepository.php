@@ -307,49 +307,40 @@ class OrderRepository extends BaseRepository
         $stk = Kopokopo::StkService();
         // +254999999999
         if($token['status'] == 'error') {
-            $order->payment_status = 'cancelled';
-            $order->payment_status_date = Carbon::now();
-            $order->save();
+            $response['status'] = 'error';
+            $response['error'] = $token['data']['errorDescription'];
+            $response['data'] = $token['data']['errorDescription'];
+        }
+        elseif($token['status'] == 'pending') {
+            $response['error'] = $token['data'];
+            // $order->payment_status = 'cancelled';
+            // $order->payment_status_date = Carbon::now();
+            // $order->save();
         } else {
+            
+
             $response = $stk->initiateIncomingPayment([
                 'paymentChannel' => 'M-PESA STK Push',
                 'tillNumber' => config('kopokopo.till_number'),
                 'firstName' => $fname,
                 'lastName' => $lname,
                 'phoneNumber' => $e164phone,
-                'amount' => $order->total_value,
+                'amount' => ceil($order->total_value),
                 'currency' => $currency,
                 'email' => $email,
                 'metadata' => array('order_id'=>$order_id),
                 'callbackUrl' => config('kopokopo.urlback'),
                 'accessToken' => $token['data']['accessToken'],
             ]);
+
+            echo ceil($order->total_value);
             if($response['status'] == 'success')
             {
-                $options = [
-                  'location' => $response['location'],
-                  'accessToken' => $token['data']['accessToken'],
-                ];
-
-                $response = $stk->getStatus($options);
-                if($response['status'] == 'success')
-                {
-                    if($response['data']['status'] == 'Failed') {
-                        $order->payment_status = 'cancelled';
-                        $order->payment_status_date = Carbon::now();
-                        $order->save();
-                    } else {
-                        $order->payment_status = 'paid';
-                        $order->order_status = 'completed';
-                        $order->payment_status_date = Carbon::now();
-                        $order->save();
-                    }
-                } else {
-                    $order->payment_status = 'cancelled';
-                    $order->payment_status_date = Carbon::now();
-                    $order->save();
-                }
+                $response['success'] = '1';
+                $response['data'] = 'Payment proceed';
             } else {
+                $response['error'] = $response['data'];
+                $response['data'] = $response['data']['errorMessage'];
                 $order->payment_status = 'cancelled';
                 $order->payment_status_date = Carbon::now();
                 $order->save();

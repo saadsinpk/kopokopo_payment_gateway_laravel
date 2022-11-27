@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "infyomlabs/laravel-generator": "^4.2.2",
         "infyomlabs/stisla-templates": "^4.0",
+        "laracasts/flash": "^3.2",
         "laravel-notification-channels/fcm": "~2.0",
         "laravel/cashier": "^13.12",
         "laravel/framework": "^9.19",

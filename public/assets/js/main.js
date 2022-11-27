@@ -22,8 +22,8 @@ $(document).ready(function(e) {
             internationalTelephoneInput: new FormValidation.plugins.InternationalTelephoneInput({
                 field: 'number',
                 separateDialCode: true,
-                initialCountry: "us",
-                preferredCountries: ["us", "br", "pt"],
+                initialCountry: "KE",
+                preferredCountries: ["ke"],
                 customPlaceholder: function(selectedCountryPlaceholder) {
                     return selectedCountryPlaceholder;
                 },
@@ -39,7 +39,7 @@ $(document).ready(function() {
     var valass = $(".iti__selected-dial-code").html();
     var number = $("#phone_number").val();
     var phonenumber = valass+ +number;
-    $('.number').val(phonenumber);
+    $('.number').attr("value", phonenumber);
     // alert(phonenumber);
     console.log(valass);
     if ($(valas).parent().parent().parent().siblings(".code").val() === "") {
@@ -47,11 +47,20 @@ $(document).ready(function() {
 
     }
 })
+$(document).on("input","#phone_number",function(){
+
+});
 $(document).on("click",".iti__flag-container",function(){
    var valass = $('.iti__selected-dial-code').html(); 
    var number = $("#phone_number").val();
     var phonenumber = valass+ +number;
-    $('.number').val(phonenumber);
+    $('#phone_number_code').val(phonenumber);
+});
+$(document).on("change","input#phone_number",function(){
+   var valass = $('.iti__selected-dial-code').html(); 
+   var number = $("#phone_number").val();
+    var phonenumber = valass+ +number;
+    $('#phone_number_code').val(phonenumber);
 });
 $(".abc").click(function() {
     const wrapper = document.createElement('div');

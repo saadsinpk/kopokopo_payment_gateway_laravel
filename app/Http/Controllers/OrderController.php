@@ -46,6 +46,7 @@ class OrderController extends AppBaseController
      * @param $id - Order id
      */
     public function show(int $id, Request $request){
+
         $order = $this->orderRepository->with(['courier','courier.user','OfflinePaymentMethod'])->find($id);
         if($order->user_id != auth()->user()->id){
             abort(403);
@@ -77,6 +78,7 @@ class OrderController extends AppBaseController
                 if($response['status'] == 'success') {
                     return redirect(route('orders.show',$id));
                 } else {
+                    flash($response['data'])->error();
                     return redirect(route('orders.show',$id))->withErrors(['msg' => $response['data']]);
                 }
             }
@@ -91,6 +93,51 @@ class OrderController extends AppBaseController
     public function ajaxGetAddressesHtml(Request $request){
         $order = Order::where('user_id',auth()->user()->id)->where('id',$request->order_id)->firstOrFail();
         return view('orders.ajax.addresses',compact('order'));
+    }
+    public function urlback(Request $request) {
+        $webhooks = Kopokopo::Webhooks();
+
+        $webhook_payload = file_get_contents('php://input');
+
+
+        $response = $webhooks->webhookHandler($webhook_payload, $_SERVER['HTTP_X_KOPOKOPO_SIGNATURE']);
+        if(!empty($webhook_payload)) {
+            $data = json_decode($webhook_payload);
+            if(isset($data->data->attributes)) {
+                if(isset($data->data->attributes->status)) {
+                    if($data->data->attributes->status == 'Success') {
+                        if(isset($data->data->attributes->event)) {
+                            if(isset($data->data->attributes->event->resource)) {
+                                if(isset($data->data->attributes->event->resource->status)) {
+                                    if($data->data->attributes->event->resource->status ==  'Received') {
+                                        if(isset($data->data->attributes->metadata)) {
+                                            if(isset($data->data->attributes->metadata->order_id)) {
+                                                $order = Order::where("id",$data->data->attributes->metadata->order_id)->first();
+                                                $order->payment_status = 'paid';
+                                                $order->order_status = 'completed';
+                                                $order->payment_status_date = Carbon::now();
+                                                $order->save();
+                                                exit();
+                                            }
+                                        }
+
+                                   } elseif($data->data->attributes->event->resource->status  == 'Failed') {
+                                        $order->payment_status = 'cancelled';
+                                        $order->payment_status_date = Carbon::now();
+                                        $order->save();
+                                        exit();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        exit();
+        // This will both validate and process the payload for you
+
     }
 
 }

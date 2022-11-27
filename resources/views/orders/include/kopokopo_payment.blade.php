@@ -46,12 +46,12 @@
                     <input class="form-control" name="first_name" value="{{Auth::user()->name}}" size='4' type='hidden'>
 
                     <!-- <input id="jquery-intl-phone" type="tel"> -->
-                    <div class='form-row row' style="padding: 0px 220px;">
+                    <div class='form-row row' style="">
                         <div class='col-xs-12 col-md-12 form-group cvc required'>
                             <label class='control-label' style="text-align:left !important;">Phone</label>
                             <input type="hidden"  class="code" name="phone_number_code"  >
-                            <input type="tel" class="form-control phone_flag" value="{{Auth::user()->phone}}" id="phone_number" placeholder="Enter Your Phone" name="number">
-                            <input type="hidden" class="form-control number" value="" id="number" name="phone">
+                            <input type="tel" class="form-control phone_flag phone_number" value="{{Auth::user()->phone}}" id="phone_number" placeholder="Enter Your Phone" name="number">
+                            <input type="hidden" class="form-control number" value="" id="phone_number_code" name="phone">
                             <!-- <input type="tel" id="jquery-intl-phone" class="form-control" placeholder="Enter Your Phone" name="phone" value="{{Auth::user()->phone}}"> -->
                             <!-- <input id="phone" autocomplete='off' class="form-control {{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{Auth::user()->phone}}" placeholder='Enter Your Phone' type="text"> -->
                         </div>

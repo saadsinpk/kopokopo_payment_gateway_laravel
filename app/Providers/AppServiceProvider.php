@@ -83,11 +83,12 @@ class AppServiceProvider extends ServiceProvider
             config(['kopokopo.client_id' => setting('kopokopo_client_id')]);
             config(['kopokopo.client_secret' => setting('kopokopo_secret')]);
             config(['kopokopo.api_key' => setting('kopokopo_key')]);
+            config(['kopokopo.till_number' => setting('kopokopo_till_number')]);
 
-            if(setting(['sendbox_kopokopo']) == 1){
-            config(['kopokopo.sandbox' => true]);
-            }elseif(setting(['sendbox_kopokopo']) == 0){
-            config(['kopokopo.sandbox' => false]);
+            if(setting('sendbox_kopokopo') == 1){
+                config(['kopokopo.sandbox' => true]);
+            }else{
+                config(['kopokopo.sandbox' => false]);
             }
 
 

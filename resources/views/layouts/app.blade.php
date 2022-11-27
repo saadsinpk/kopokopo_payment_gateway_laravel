@@ -89,5 +89,12 @@
 
 
     }(jQuery));
+    @if(Session::has('error'))
+		toastr.options = {
+			"closeButton": true,
+			"progressBar": true
+		}
+		toastr.error("{{ session('error') }}");
+    @endif
 </script>
 </html>

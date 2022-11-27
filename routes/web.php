@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::any('urlback', [\App\Http\Controllers\OrderController::class, 'urlback'])->name('urlback');
 
 Route::get('login/{service}', [\App\Http\Controllers\Auth\LoginController::class, 'redirectToProvider']);
 Route::get('login/{service}/callback', [\App\Http\Controllers\Auth\LoginController::class, 'handleProviderCallback']);
