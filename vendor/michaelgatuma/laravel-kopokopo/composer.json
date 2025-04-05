@@ -1,0 +1,50 @@
+{
+    "name": "michaelgatuma/laravel-kopokopo",
+    "description": "A simple package for developers to consume Kopokopo Mpesa API in Laravel 8",
+    "homepage": "https://github/michaelgatuma/laravel-kopokopo",
+    "keywords": [
+        "kopokopo",
+        "mpesa",
+        "laravel",
+        "michaelgatuma"
+    ],
+    "type": "laravel",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "authors": [
+        {
+            "name": "Michael Gatuma",
+            "email": "mgates4410@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^8.0|^9.0",
+        "guzzlehttp/guzzle": "^7.1",
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Michaelgatuma\\Kopokopo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Michaelgatuma\\Kopokopo\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Michaelgatuma\\Kopokopo\\KopokopoServiceProvider"
+            ],
+            "aliases": {
+                "Kopokopo": "Michaelgatuma\\Kopokopo\\Facades\\Kopokopo"
+            }
+        }
+    }
+
+}
